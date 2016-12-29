@@ -1,0 +1,90 @@
+@import url("whitespace-reset.css");
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: normal 18px 'Roboto Condensed', sans-serif;
+  background-image: linear-gradient(to bottom, #d1dbbd, #fcfff4);
+  background-repeat: no-repeat;
+  color: #3e606f;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  color: #3e606f;
+  padding: 45px 0 15px 115px;
+  background: transparent url("cam_logo.png") 0 0 no-repeat;
+  float: left
+}
+
+header {
+  width: 920px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+}
+
+nav {
+  float: right;
+  padding-top: 75px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+   display: block;
+   text-decoration: none;
+   padding: 10px 40px 14px 40px;
+   color: #91aa9d;
+   background: #fcfff5;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   
+}
+
+nav .active {
+  background: #91aa9d;
+  color: #fcfff5;
+}
+
+header:after {
+  display: block;
+  content: "";
+  clear: right;
+}
+
+main {
+  width: 900px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 5px 5px #b5b5b5;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  padding: 40px 0 30px 0;
+}
+
+p {
+  padding-bottom: 25px;
+}
+
+#tree_pic {
+  float: right;
+  padding-left: 40px;
+}
+
+footer {
+  font-size: 14px;
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+

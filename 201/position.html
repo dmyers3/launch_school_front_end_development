@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <style>
+    #positioned {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      /* Add a z-index greater than the elements you want to appear on top of */
+      z-index: 2;
+      width: 400px;
+      padding: 30px 15px;
+      margin-left: -200px;
+      background: #ffffff;
+      box-sizing: border-box;
+    }
+
+    #positioned span {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      background: #fcfc99;
+    }
+      
+      #background {
+        position: absolute;
+        background: rgba(0,0,0,.6);
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      section {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background: #fcfc99;
+        left: 0;
+        top: 9;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra arcu mauris, at imperdiet nunc pretium lobortis. Etiam pulvinar feugiat lacus, vitae accumsan arcu vulputate eget. Sed imperdiet euismod sodales. Curabitur cursus lectus et nisi interdum, vitae porta tortor porta. Sed consequat rhoncus mauris, quis malesuada leo sollicitudin porta. Nulla facilisi. Vivamus scelerisque pellentesque libero, in pulvinar felis placerat eget. Nulla convallis, tellus at feugiat efficitur, dolor arcu ullamcorper ligula, ac imperdiet justo mi vitae dui. Vivamus a luctus nunc. Donec cursus lacus sed eros rutrum, at eleifend magna luctus. Nunc nec arcu quis turpis tempor aliquam. Vivamus viverra nisl ut lectus rhoncus eleifend. Aenean vitae viverra augue, eu condimentum ipsum. Integer maximus, augue in semper convallis, odio dui rhoncus felis, venenatis cursus elit nisl placerat augue. In malesuada erat odio, in porta metus fringilla sit amet.
+    </p>
+    <p>
+      Etiam nec efficitur enim, sit amet bibendum nisl. Vivamus libero sapien, sagittis id volutpat ac, varius nec nisl. In hac habitasse platea dictumst. Donec molestie sapien quis posuere semper. Nullam tincidunt urna quis suscipit bibendum. Praesent eleifend eros ut quam gravida, nec tincidunt lacus lacinia. Aliquam quis molestie massa. Morbi consequat convallis leo, at aliquam ex imperdiet nec. Integer sit amet ultricies enim. Nulla sed ipsum sed eros ultricies elementum vel in eros. Duis dapibus risus at luctus porta. Proin congue commodo dolor. Suspendisse vitae eros tortor. Ut efficitur sit amet purus vel blandit. Morbi facilisis sem ut pretium auctor. Vestibulum vel sem diam.
+    </p>
+    <p>  
+      Aliquam lacinia, nisi id commodo pellentesque, enim velit rutrum arcu, ac venenatis libero nulla commodo nisi. Fusce nec bibendum felis. Donec id arcu molestie lorem dapibus facilisis sodales eu diam. Nunc efficitur purus sit amet magna dictum, vel rutrum lectus venenatis. Sed bibendum metus ullamcorper quam finibus ultrices. Duis efficitur eu augue sed ornare. Maecenas aliquam felis scelerisque, tempor tortor non, auctor mauris. Nam dignissim dapibus tortor vitae cursus. Praesent consectetur ipsum vitae nibh iaculis elementum. In hac habitasse platea dictumst. Praesent sed est pretium, fermentum libero ut, suscipit magna. Cras pharetra dapibus commodo. Nunc eget orci aliquet, ultrices magna elementum, fringilla justo.
+    </p>
+    <p>  
+      Sed vulputate vestibulum orci, eu posuere eros eleifend sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse id varius dui. Maecenas a felis rhoncus, ullamcorper mauris eget, iaculis metus. Maecenas vestibulum tristique ligula sit amet ultrices. Mauris iaculis nec turpis vitae finibus. Aliquam ut convallis sem. Mauris quis porttitor tellus. Suspendisse potenti. Etiam et rutrum orci. Fusce hendrerit mollis ligula, vel commodo dui tincidunt quis.
+    </p>
+    <div id="background">
+    </div>
+    <div id="positioned">
+      <span></span>
+      I'm positioned!
+    </div>
+  </body>
+</html> 

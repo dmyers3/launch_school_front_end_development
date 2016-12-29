@@ -1,0 +1,91 @@
+<form action="" method="post">
+  <fieldset>
+    <div>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="user_name" required />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="user_email" required />
+    </div>
+    <div>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="user_phone" required />
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="user_message" required></textarea>
+    </div>
+    <div>
+      <button type="submit">Send Message</button>
+      <button type="reset">Clear</button>
+    </div>
+  </fieldset>
+</form>
+
+<form action="" method="post">
+  <fieldset>
+    <dl>
+      <dt><label for="name">Your Name</label></dt>
+      <dd><input type="text" name="name" id="name" required /></dd>
+      <dt><label for="email">Email</label></dt>
+      <dd><input type="email" name="email" id="email" required /></dd>
+      <dt><label for="phone">Phone Number</label></dt>
+      <dd><input type="tel" name="phone" id="phone" required /></dd>
+      <dt><label for="message">Message</label></dt>
+      <dd><textarea rows="6" cols="80" name="message" id="message" required></textarea></dd>
+    </dl>
+    <input type="submit" value="Send Message" />
+    <input type="reset" value="Clear" />
+  </fieldset>
+</form>
+
+<form action="" method="post">
+  <fieldset>
+    <label for="search">Search for"</label>
+    <input type="search" id="search" name="search" />
+    <label for="tv">
+      <input type="radio" name="search_in" id="tv" value="tv">TV
+    </label>
+    <label for="movies">
+      <input type="radio" name="search_in" id="movies" value="movies">Movies
+    </label>
+    <label for="music">
+      <input type="radio" name="search_in" id="music" value="music">Music
+    </label>
+    <button type="button">Search</button>
+  </fieldset>
+</form>
+
+<form action="" method="get">
+  <fieldset>
+    <label for="query">Search for</label>
+    <input type="search" name="query" id="query" />
+    <label><input type="radio" name="filter" value="tv" />TV</label>
+    <label><input type="radio" name="filter" value="movies" />Movies</label>
+    <label><input type="radio" name="filter" value="music" />Music</label>
+    <input type="button" value="Search" />
+  </fieldset>
+</form>
+
+<form action="" method="post">
+  <fieldset>
+    <dl>
+      <dt><label for="movie">Movie</label></dt>
+      <dd>
+        <select id="movie" name="movie">
+          <option value="Looper" selected>Looper</option>
+          <option value="Frozen">Frozen</option>
+          <option value="Tommy Boy">Tommy Boy</option>
+        </select>
+      </dd>
+      <dt><label for="rating">Rating</label></dt>
+      <dd><input type="range" id="rating" name="rating" min="1" max="5" step="1"></dd>
+    </dl>
+    <div>
+      <input type="checkbox" id="favorites" name="favorites" checked>
+      <label for="favorites">Add to my favorites</label>
+    </div>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
