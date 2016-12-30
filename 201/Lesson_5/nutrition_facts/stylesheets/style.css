@@ -1,0 +1,82 @@
+main {
+  width: 678px;
+  border: solid 3px #000;
+  font: normal 30px #000;
+  padding: 20px;
+}
+
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+}
+
+h2 {
+  font: normal 30px Helvetica, Arial, sans-serif;
+  border-bottom: solid 30px #000;
+}
+
+th, td {
+  border-bottom: solid 1px #000;
+  width: 100%;
+  text-align: left;
+  height: 48px;
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 30px;
+}
+
+sub {
+  vertical-align: 4px
+}
+
+.first_vitamin_mineral {
+  border-top: solid 30px #000;
+  box-sizing: border-box;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+td:nth-child(2) {
+  width: 75%;
+}
+
+.details th {
+  padding-left: 25px;
+  font-weight: normal;
+}
+
+tbody tr:first-child th {
+  text-align: right;
+}
+
+p {
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+.daily_values th, .daily_values td {
+  padding: 0 20px 0 0;
+  font: normal 22px Helvetica, Arial, sans-serif;
+  border: none;
+  height: 32px;
+}
+
+.daily_values thead {
+  border-bottom:  solid 1px;
+}
+
+.daily_values .details th {
+  padding-left: 25px;
+}
+
+.daily_values tr:first-child th {
+  text-align: left;
+}
+
+

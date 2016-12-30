@@ -3,68 +3,23 @@
   <head>
     <title>Space Design</title>
     <meta charset="UTF-8" />
-    <style>
-    body {
-      background: #2f2840 url("assets/bg_body.gif");
-      font-family: Helvetica, sans-serif;
-      font-size: 20px;
-      padding-bottom: 50px;
-    }
-    
-    .logo {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 40px;
-    }
-    
-    main {
-      background-color: white;
-      width: 940px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: 30px;
-    }
-    
-    article {
-      padding: 50px;
-      text-align: center;
-    }
-    
-    h2 {
-      font-size: 28px;
-    }
-    
-    h3 {
-      color: #00a3cc
-    }
-    
-    footer {
-      background-color: #e6e6e6;
-      width: 940px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    
-    ul {
-      text-align: center;
-    }
-    
-    li {
-      display: inline-block;
-      margin-left: 40px;
-      margin-right: 40px;
-    }
-    </style>
+    <!--<link rel="stylesheet" href="assets/whitespace-reset.css" />-->
+    <link rel="stylesheet" href="assets/space_style.css" />
   </head>
   <body>
     <header>
       <h1>
-        <img class="logo" alt="Space Design Logo" src="assets/logo.png" />
+        <a href="space_design.html">
+          <img class="logo" alt="Space Design Logo" src="assets/space/logo.png" />
+        </a>
       </h1>
+      <nav>
+        <ul>
+          <li class="current_page"><a href="space_design.html">Home</a></li>
+          <li><a href="space_design_projects.html">Projects</a></li>
+          <li><a href="space_design_team.html">Team</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <article>
@@ -95,10 +50,14 @@
       </article>
     </main>
     <footer>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis rutrum ante. Suspendisse lacinia ipsum in
+      </p>
       <ul>
-        <li><a href="#"><img alt="Twitter Logo" src="assets/icon_twitter.png" /></a></li>
-        <li><a href="#"><img alt="Facebook Logo" src="assets/icon_facebook.png" /></a></li>
-        <li><a href="#"><img alt="Email Logo" src="assets/icon_email.png" /></a></li>
+        <li><a class="twitter" href="#"></a></li>
+        <li><a class="facebook" href="#"></a></li>
+        <li><a class="email" href="#"></a></li>
+        <li><a class="instagram" href="#"></a></li>
       </ul>
     </footer>
   </body>
