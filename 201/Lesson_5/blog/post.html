@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Blog | Post</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/stylesheets/whitespace-reset.css" />
+    <link rel="stylesheet" href="assets/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <h1>Blog Title</h1>
+          <img src="assets/images/blog_logo.png" alt="logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="current_page" href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Javascript</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="content">
+        <article>
+          <h2><a href="post.html">Post Headline</a></h2>
+          <h3>Written by <a href="#">Shane Riley</a> on <time datetime="2014-02-15">Feb. 15, 2014</time></h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            alquip ex ea commodo consequat. Duis aute irure dolor in 
+            rprehenderit in voluptate velit esse culpa qui officia deserunt 
+            mollit.
+          </p>
+        </article>
+        <article>
+          <h2>Comments</h2>
+          <h3><a href="#">Kevin</a> on <time datetime="2014-02-15">Feb. 15, 2014</time></h3>
+          <p class="comment">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            ad minim veniam.
+          </p>
+          <h3><a href="#">Chris</a> on <time datetime="2014-02-15">Feb. 15, 2014</time></h3>
+          <p class="comment">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            ad minim veniam.
+          </p>
+        </article>
+        <div>
+          <label class="button">
+            Post a comment
+            <input type="checkbox" name="toggle_form" id="toggle_form" />
+          </label>
+        </div>
+        <form class="hidden" action="" method="post">
+        <fieldset>
+          <h2>Post Comment</h2>
+          <dl>
+            <dt>
+              <label for="name">Your name</label>
+            </dt>
+            <dd>
+              <input type="text" name="name" id="name" />
+            </dd>
+            <dt>
+              <label for="email">Email address</label>
+            </dt>
+            <dd>
+              <input type="email" name="email" id="email" placeholder="name@website.com" />
+            </dd>
+             <dt>
+              <label for="comment">Comment</label>
+            </dt>
+            <dd>
+              <textarea name="comment" id="comment"></textarea>
+            </dd>
+            <button class="button" type="submit">Submit</button>
+        </fieldset>
+      </form>
+      </section>
+      <aside>
+        <h4>Categories</h4>
+        <div class="block">
+        <ul>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Javascript</a></li>
+          <li><a href="#">Other</a></li>
+        </ul>
+        </div>
+        <h4>About</h4>
+        <p>
+          Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quisq.
+        </p>
+      </aside>
+      
+    </main>
+    <footer>
+      <p>&copy; 2014 Blog Title</p>
+    </footer>
+  </body>
+</html> 
