@@ -1,0 +1,66 @@
+p {
+  z-index: 1;
+}
+
+span {
+  float: right;
+  background: blue;
+  width: 25%;
+  /*display: inline-block;*/
+  box-sizing: border-box;
+}
+
+.after_float {
+  clear: both;
+}
+
+.float_container {
+  background: green;
+}
+
+.float_container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main {
+  max-width: 1000px;
+}
+
+aside {
+  overflow: hidden;
+  float: left;
+}
+
+.first {
+  width: 65%;
+  float: left;
+}
+
+.second {
+  overflow: hidden;
+}
+
+.columns {
+  margin-right: 220px;
+}
+
+.secondary {
+  float: right;
+  width: 200px;
+  margin-right: -220px;
+  background: lightgreen;
+}
+
+.primary {
+  float: left;
+  width: 100%;
+  background: lightyellow;
+}
+
+.relative {
+  clear: both;
+  position: relative;
+  top: -70px;
+}

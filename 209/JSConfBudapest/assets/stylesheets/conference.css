@@ -1,0 +1,94 @@
+@import url("whitespace-reset.css");
+
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+}
+
+header {
+  background: #3580c2;
+}
+
+ul {
+  padding-left: 470px;
+}
+
+nav li {
+  display: inline-block;
+  padding: 30px 15px;
+  vertical-align: top;
+}
+
+/*nav li:first-child:before {*/
+/*  background: transparent url("../images/js_white_logo.png") 0 0 no-repeat;*/
+/*  content: "";*/
+/*  height: 46px;*/
+/*  width: 46px;*/
+/*  display: inline-block;*/
+/*  vertical-align: middle;*/
+/*  margin-right: 30px;*/
+/*}*/
+
+nav li:first-child {
+  padding: 14px 15px;
+}
+
+nav li:first-child:hover {
+  background: #3580c2;
+}
+
+nav li:hover {
+  background: #488cc8;
+}
+
+nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+#fb_icon, #twitter_icon {
+  float: right;
+  vertical-align: middle;
+}
+
+#fb_icon {
+  padding: 25px 30px;
+}
+
+#twitter_icon {
+  padding: 23px 30px;
+}
+
+main {
+  background: transparent url("../images/js_white_logo.png") 0 0 no-repeat;
+}
+
+h1 {
+  position: relative;
+  padding: 110px 0 140px 0;
+  text-align: center;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.city {
+  color: #f3df49;
+}
+
+.symbol {
+  font-size: 40px;
+  padding: 0 25px;
+  font-weight: 100;
+}
+
+.vertical_align {
+  position: absolute;
+  top: 50%;
+}
