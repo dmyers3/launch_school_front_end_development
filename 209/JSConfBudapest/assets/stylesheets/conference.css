@@ -1,15 +1,24 @@
 @import url("whitespace-reset.css");
 
 body {
-  font: normal 16px Helvetica, Arial, sans-serif;
+  font: normal 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 header {
   background: #3580c2;
 }
 
-ul {
-  padding-left: 470px;
+nav {
+  margin-right: 172px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.social {
+  margin-right: -172px;
 }
 
 nav li {
@@ -18,21 +27,12 @@ nav li {
   vertical-align: top;
 }
 
-/*nav li:first-child:before {*/
-/*  background: transparent url("../images/js_white_logo.png") 0 0 no-repeat;*/
-/*  content: "";*/
-/*  height: 46px;*/
-/*  width: 46px;*/
-/*  display: inline-block;*/
-/*  vertical-align: middle;*/
-/*  margin-right: 30px;*/
-/*}*/
 
 nav li:first-child {
   padding: 14px 15px;
 }
 
-nav li:first-child:hover {
+.nav li:first-child:hover {
   background: #3580c2;
 }
 
@@ -43,7 +43,6 @@ nav li:hover {
 nav li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
 }
 
 nav:after {
@@ -66,29 +65,100 @@ nav:after {
 }
 
 main {
-  background: transparent url("../images/js_white_logo.png") 0 0 no-repeat;
+  
 }
 
 h1 {
   position: relative;
   padding: 110px 0 140px 0;
   text-align: center;
-  font-size: 26px;
+  font-size: 36px;
   text-transform: uppercase;
   color: #ffffff;
+  vertical-align: top;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
 }
 
 .city {
   color: #f3df49;
+  vertical-align: middle;
 }
 
 .symbol {
-  font-size: 40px;
+  font-size: 60px;
   padding: 0 25px;
-  font-weight: 100;
+  font-weight: 300;
+  vertical-align: middle;
 }
 
-.vertical_align {
-  position: absolute;
-  top: 50%;
+
+.intro {
+  font-size: 30px;
+  font-weight: 300;
+  width: 570px;
+  margin: 90px auto 75px auto;
+  text-align: center;
+  line-height: 1.4em;
+  color: #20201f;
 }
+
+b {
+  font-weight: 600;
+  
+}
+
+section {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #3580c2;
+  padding: 30px 85px;
+  display: inline-block;
+  background: url("../images/triangle.png") 0 50% no-repeat, transparent url("../images/rotated_triangle.png") 100% 50% no-repeat;
+  margin-bottom: 25px;           
+}
+
+section li {
+  display: inline-block;
+}
+
+.cutCorner {
+    position:relative;
+    display: inline-block;
+}
+
+.cutCorner img {
+    width: 120px;
+    height: auto;
+    display: inline-block;
+}
+
+.cutCorner:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  border-bottom: 13px solid white;
+  border-right: 13px solid transparent;
+}
+
+.cutCorner:after {
+    position:absolute; 
+    right: 0; 
+    top: 0; 
+    content:'';
+    border-right: 13px solid white;
+    border-bottom: 13px solid transparent;
+}
+
+h3 {
+  display: inline-block;
+}
+
