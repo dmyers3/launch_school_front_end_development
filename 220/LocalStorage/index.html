@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Refactoring</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="storage.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="storage.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <ul>
+            <li><a class="active" href='#'>Content 1</a></li>
+            <li><a href='#'>Content 2</a></li>
+            <li><a href='#'>Content 3</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <article>
+          <p>
+            This is Content 1, it is awesome but is only gonna be shown when
+            Content 1 Link is selected.
+          </p>
+        </article>
+        <article>
+          <p>
+            This is Content 2, it is awesome but is only gonna be shown when
+            Content 2 Link is selected.
+          </p>
+        </article>
+        <article>
+          <p>
+            This is Content 3, it is awesome but is only gonna be shown when
+            Content 3 Link is selected.
+          </p>
+        </article> 
+      </section>
+      
+      <form action="" method="post">
+        <h2>Change Background Color to:</h2>
+        <label>
+          <input type='radio' name='color' value='Red'>Red
+        </label>
+        <label>
+          <input type='radio' name='color' value="Blue">Blue
+        </label>
+        <label>
+          <input type='radio' name="color" value="Green">Green
+        </label>
+      <h2>Leave a Note</h2>
+      <textarea name="note" placeholder="Enter some text here" rows="8" cols="80"></textarea>
+      </form>
+      <canvas width="800" height="600"></canvas>
+    </main>
+  </body>
+</html>

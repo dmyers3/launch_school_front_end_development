@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Contact Manager</title>
+    <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="contacts.js"></script>
+    <link rel="stylesheet" href="assets/stylesheets/contacts.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Manager</h1>
+      <h3>Using JQuery, Localstorage, and Handlebars</h3>
+    </header>
+    <main>
+      <div class="slide">
+        <div class="main_header">
+          <div class="add_contact">
+            <a class="button add" href="#">Add Contact</a>
+          </div>
+          <div class="search">
+            <input id="search" type="search" placeholder="Search"/>
+          </div>
+        </div>
+        <div class="main_container">
+          <div class="no_contacts">
+            <p>There are no contacts.</p>
+            <a class="button add" href="#">Add Contact</a>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    <footer>Developed by Dan Myers</footer>
+    <script id="contact_template" type="text/x-handlebars">
+      <div class="contact">
+        <h2>{{name}}</h2>
+        <label>Phone Number:</label>
+        <p>{{phone}}</p>
+        <label>Email:</label>
+        <p>{{email}}</p>
+        <div class="contact_buttons">
+          <a class="button edit" href="#">Edit</a>
+          <a class="button delete" href="#">Delete</a>
+        </div>
+      </div>
+    </script>
+    <script id="add_edit_template" type="text/x-handlebars">
+      <form method="post" action="">
+        <h2>{{type}} Contact</h2>
+        <fieldset>
+          <label>Full name: <input type="text" id="name" value="{{name}}"/></label>
+          <label>Email address: <input type="email" id="email" value="{{email}}"/></label>
+          <label>Telephone number: <input type="text" id="phone" value="{{phone}}"/></label>
+          <button class="button submit" type="submit">Submit</button>
+          <button class="button cancel" type="button">Cancel</button>
+        </fieldset>
+      </form>
+    </script>
+    <script id='contacts_list' type='text/x-handlebars'>
+      <div class="contacts">
+        {{#each contacts}}
+        {{> contactTemplate}}
+        {{/each}}
+      </div>
+    </script>
+  </body>
+</html>
+
