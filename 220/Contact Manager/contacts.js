@@ -28,53 +28,117 @@ $(function() {
   var numContacts = contacts.length;
   var hiddenHTML = '';
   
+  var slideHTML = $('<div />').append($('.slide').clone()).html();
+  var mainHeaderHTML = $('<div />').append($('.main_header').clone()).html();
+  var mainContainerHTML = $('<div />').append($('.main_container').clone()).html();
+  console.log(slideHTML);
+  
   var Contact = {
     init: function(name, phone, email) {
       this.name = name;
       this.phone = phone;
       this.email = email;
+      return this;
     }
   };
   
-  function addButtonEventListeners() {
-    $('button .submit').on('submit', function(e) {
+  // function addButtonEventListeners() {
+  //   $('button .submit').on('submit', function(e) {
+  //     e.preventDefault();
+  //     var name = $('#name').val();
+  //     var phone = $('#phone').val();
+  //     var email = $('#email').val();
+  //     contacts.push( Object.create(Contact).init(name, phone, email));
+  //     $('form').slideUp();
+  //     $('.main_container').html(contactsList({ contacts: contacts}));
+  //   });
+    
+  //   $('.cancel').on('click', function(e) {
+  //     e.preventDefault();
+  //     console.log(hiddenHTML);
+  //     $('form').slideUp(500);
+  //     $('main').append(hiddenHTML);
+  //     // $('main').html(contactsList({ contacts: contacts}));
+  //   });
+  // }
+  
+  function addSubmitListener() {
+     $('form').on('submit', function(e) {
       e.preventDefault();
       var name = $('#name').val();
       var phone = $('#phone').val();
       var email = $('#email').val();
+      var sample = Object.create(Contact);
       contacts.push( Object.create(Contact).init(name, phone, email));
+      console.log(sample);
       $('form').slideUp();
       $('.main_container').html(contactsList({ contacts: contacts}));
+      $('.slide').slideDown();
+      $('form').off('submit');
     });
-    
-    $('.cancel').on('click', function(e) {
-      e.preventDefault();
-      console.log(hiddenHTML);
-      $('form').slideUp(500);
-      $('main').append(hiddenHTML);
-      // $('main').html(contactsList({ contacts: contacts}));
-    });
-  }
+  } 
   
-  $('.add').on('click', function(e) {
+   $('main').on('click', '.add', function(e) {
     e.preventDefault();
-    hiddenHTML = $('.slide').html();
-    console.log(hiddenHTML);
     $('.slide').slideUp(500);
-    $('main').append(addEditTemplate({ type: 'Create', name: '', email: '', phone: ''}));
-    addButtonEventListeners();
+    $('.add_edit_form').html(addEditTemplate({ type: 'Create', name: '', email: '', phone: ''}));
+    addSubmitListener();
   });
   
-  $('.edit').on('click', function(e) {
+  $('main').on('click', '.edit', function(e) {
+    e.preventDefault();
+    $('.no_contacts').slideUp();
+    $('.contacts').slideUp();
+    addSubmitListener();
+  });
+  
+  $('main').on('click', '.delete', function(e) {
     e.preventDefault();
     $('.no_contacts').slideUp();
     $('.contacts').slideUp();
   });
   
-  $('.delete').on('click', function(e) {
+   
+    
+  $('main').on('click', '.cancel', function(e) {
     e.preventDefault();
-    $('.no_contacts').slideUp();
-    $('.contacts').slideUp();
+    $('.slide').slideDown(500);
+    $('form').slideUp(500);
+    
+    // if (numContacts === 0) {
+    //   $('main').append(initalMainHTML);
+    // } else {
+    //     $('main').append(contactsList({ contacts: contacts}));
+    // }
+    $('form').off('submit');
   });
+  
+  // $('.add').on('click', function(e) {
+  //   e.preventDefault();
+  //   hiddenHTML = $('.slide').html();
+  //   console.log(hiddenHTML);
+  //   $('.slide').slideUp(500);
+  //   $('main').append(addEditTemplate({ type: 'Create', name: '', email: '', phone: ''}));
+  //   addButtonEventListeners();
+  // });
+  
+  // $('.edit').on('click', function(e) {
+  //   e.preventDefault();
+  //   $('.no_contacts').slideUp();
+  //   $('.contacts').slideUp();
+  // });
+  
+  // $('.delete').on('click', function(e) {
+  //   e.preventDefault();
+  //   $('.no_contacts').slideUp();
+  //   $('.contacts').slideUp();
+  // });
  
 })
+
+// start with header and no contacts
+
+// on ADD slide UP entire segment (header and no contacts) and display ADD form
+
+//   if cancel slide DOWN header/no contacts and remove form
+//   if SUBMIT change no contacts to contactsTemplate and slide DOWN header/contacts and remove form
