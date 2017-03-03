@@ -43,7 +43,7 @@ main {
   content: '';
   display: block;
 }
-.main_header .button, .main_container .button {
+.main_header .button, .contacts_container .button {
   padding: 8px 12px;
   text-decoration: none;
   font-size: 1.3em;
@@ -86,13 +86,13 @@ h2 {
   font-weight: normal;
 }
 
-.main_container {
+.contacts_container {
   padding: 0 0 60px 0;
   border-bottom: 1px solid #e3e3e3;
   margin: 0 20px;
 }
 
-.main_container:after {
+.contacts_container:after {
   display: block;
   clear: both;
   content: '';

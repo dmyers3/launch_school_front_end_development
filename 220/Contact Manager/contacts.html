@@ -23,11 +23,10 @@
             <input id="search" type="search" placeholder="Search"/>
           </div>
         </div>
-        <div class="main_container">
-          <div class="no_contacts">
-            <p>There are no contacts.</p>
-            <a class="button add" href="#">Add Contact</a>
-          </div>
+        <div class="contacts_container">
+        </div>
+        <div class="display_all" hidden>
+          <a href="#" class="display_all_link">Display All</a>
         </div>
       </div>
       <div class="add_edit_form">
@@ -38,9 +37,12 @@
       <div class="contact">
         <h2>{{name}}</h2>
         <label>Phone Number:</label>
-        <p>{{phone}}</p>
+        <p class="phone">{{phone}}</p>
         <label>Email:</label>
-        <p>{{email}}</p>
+        <p class="email">{{email}}</p>
+        {{#each tags}}
+          <a class="tag" href="#">{{this}}</a>
+        {{/each}}
         <div class="contact_buttons">
           <a class="button edit" href="#">Edit</a>
           <a class="button delete" href="#">Delete</a>
@@ -54,6 +56,7 @@
           <label>Full name: <input type="text" id="name" value="{{name}}"/></label>
           <label>Email address: <input type="email" id="email" value="{{email}}"/></label>
           <label>Telephone number: <input type="text" id="phone" value="{{phone}}"/></label>
+          <label>Tags (comma-separated): <input type="text" id="tags" value="{{tags}}" placeholder="tag1, tag2, tag3"/></label>
           <button class="button submit" type="submit">Submit</button>
           <button class="button cancel" type="button">Cancel</button>
         </fieldset>
