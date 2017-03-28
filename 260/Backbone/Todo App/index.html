@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Todos</title>
+    <meta charset="UTF-8" />
+    <!--<link rel="stylesheet" href="stylesheets/page.css" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="javascripts/handlebars-v4.0.5.js"></script>
+    <script src="javascripts/underscore.js"></script>
+    <script src="javascripts/backbone.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Todos</h1>
+      
+
+      <form action="" method="post">
+        <fieldset>
+          <input type="text" name="name" placeholder="What needs to be done?"/>
+          <!--<input type="submit" value="Add Item" />-->
+        </fieldset>
+      </form>
+      <ul id="todoList"></ul>
+      <p><a href="#">Clear Completed</a></p>
+    </main>
+
+    <script id="items" type="text/x-handlebars">
+      {{#each items}}
+        {{#with attributes}}
+        {{> item}}
+        {{/with}}
+      {{/each}}
+    </script>
+
+    <script id="todo" type="text/x-handlebars">
+      <li data-complete={{completed}}>{{name}}</li>
+    </script>
+    <script src="javascripts/app.js"></script>
+  </body>
+</html>

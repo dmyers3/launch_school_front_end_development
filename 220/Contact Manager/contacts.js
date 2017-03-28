@@ -158,3 +158,11 @@ $(function() {
 
 //   if cancel slide DOWN header/no contacts and remove form
 //   if SUBMIT change no contacts to contactsTemplate and slide DOWN header/contacts and remove form
+
+setTimeout(function() {console.log("YES!")},0);
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+
