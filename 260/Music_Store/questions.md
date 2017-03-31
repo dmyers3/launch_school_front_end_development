@@ -24,10 +24,57 @@ mixin stylesheet_link_tag(src)
   link(rel='stylesheet' href='/stylesheets/' + src + '.css') needed instead of:
   
   link(rel='stylesheet' href='/stylesheets/#{src}.css')
+  
+Album Node Module video explanation is missing
+
+what is albums in index.pug - App.albums = new Albums(!{JSON.stringify(albums)}); ????
+
+extends layout
+
+block content
+  h1= title
+  ul#albums
+    each album in albums
+      li
+        img(src=album.cover)
+        h2 #{album.artist}
+        h3 #{album.title}
+        p #{album.date}
+        p $#{album.price}
+        a.button(href=album.url || "#") Add to Cart
+block scripts
+  script(type="text/javascript").
+    console.log(#{albums});
+    App.albums = new Albums(!{JSON.stringify(albums)});
+    
+console.log throws: Uncaught SyntaxError: Unexpected identifier
 
 
+setting up Grunt handlebars - it mentioned live session. where is this?
 
+When do we need to make sure we include other files? Is it basically what files are included in HTML/Pug File?
 
+var App = {
+  templates: JST,
+  $el: $('main'),
+  renderAlbums: function() {
+    this.albums.each(this.renderAlbumView);
+  },
+  renderAlbumView: function(album) {
+     new AlbumView({
+       model: album
+     })
+  },
+  init: function() {
+      this.renderAlbums();
+  }
+};
+
+Where does album come from in model: album? - passed in from each method. albums is set in standalone script in index.pug, in index.pug albums is sent in 
+from index.js, which uses Album.get() defined in local node file album_node.js
+
+When clicking on link, what makes address appear in bar? is that something router automatically does? since we used e.preventDefault I thought it would prevent
+new address from showing
 
 ******************************* Video Process ******************************
 create express application using express keyword and name of app (if app folder already
@@ -87,6 +134,84 @@ refer to actual location typed in by user?
 
 create form on newAlbum.pug
   use names corresponding to object attribute names so you don't have to map after submitting form
+  
+add any CSS to form
+
+Reduce routes down to just one main routes file and in that javascript file include all the other routes by iterating
+through them
+
+use router.post to send data to server. can get form data from req.body, send json response with res.json
+
+Can load initial albums view from index.pug so that you don't have to call server after page loads - saves time
+
+Use grunt-contrib-handlebars to precompile handlebars templates - need to make sure installed and add to Gruntfile
+
+set up Handlebars template, create templates property in main application.js App object and set that equal to JST (or however else
+you store all your templates)
+  this way you can do App.templates.(specific_template) in your view as the template
+  
+
+Node.js server
+  modules
+Express framework - used for backend
+  routes
+    javascript files
+  views
+    pug files
+    stylus for css
+  app.js - main file with settings
+Bower to manage dependencies
+Grunt task manager
+  automates things like concatening all dependencies to make one file, minifying
+  that file, automatically making handlebars templates
+Backbone
+  models
+  collections
+  views
+  router
+  events
+  
+
+app.js
+  var routes = require('./routes/all'); sets routes equal to return value of require function, which 
+    is value of module.exports of /routes/all.js
+  app.set('view engine', 'pug');
+    sets up pug to be used to render views
+  app.use('/', routes);
+    when user accesses root directory, uses routes variable- this has all functionality from javascript files in routes directory (see all.js below)
+  
+  all.js
+    iterates through other files in routes directory
+    require(path.resolve(path.dirname(__dirname), "routes/" + route_files[i]))(router);
+      that passes router (which is method on express object) to return value of
+      each file in routes directory - which we set up to be a function
+        the function in each file sets up http actions (get/post/put/delete) for specified URL's
+        and dictates what is done when those http requests are sent (i.e they can take a request and perform
+        any actions and then send a response)
+    index.js is for handling index page
+    albums.js is for new albums form, posting new albums, (editing, and deleting http requests present but not used in app yet)
+    
+Pug
+  template engine to compile HTML. its a way to use variables which are replaced at runtime with actual values and compiled to HTML
+  res.render in express routes will use pug to compile html with this syntax: res.render(view [, locals] [, callback])
+    view is name of pug file, locals is object containing variables to be passed to pug file
+  can use Pug mixins, which are similar to functions in that they take arguments and 
+    
+Stylus
+  used similarly to Pug to compile CSS to render the HTML. 
+  
+Node modules
+  use module.export to transport functionality between different files
+  require(filename) returns value of filename's module.export
+  
+Essentially express loads initial HTML page after it is compiled by Pug. This file contains all the javascript to execute
+the Backbone models/collections/views of the application.
+
+    
+
+
+
+
 
 
 

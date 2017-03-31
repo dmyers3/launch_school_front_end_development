@@ -1,13 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  ul#albums
-    each album in albums
-      li
-        img(src=album.cover)
-        h2 #{album.artist}
-        h3 #{album.title}
-        p #{album.date}
-        p $#{album.price}
-        a.button(href=album.url || "#") Add to Cart
+  div working
+block scripts
+  // script(type="text/javascript").
+    // console.log(#{albums});
+    // App.albums = new Albums(!{JSON.stringify(albums)});
+    // App.init()
+    

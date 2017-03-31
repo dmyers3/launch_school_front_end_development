@@ -17,37 +17,37 @@ main {
   background: #fff;
   box-sizing: border-box;
 }
-h1 {
+#index h1 {
   padding: 0 0 25px 0;
   font-size: 2em;
 }
-h2 {
+#index h2 {
   font-size: 1.5em;
 }
-h3 {
+#index h3 {
   font-size: 1.2em;
 }
-h2,
-h3,
-p {
+#index h2,
+#index h3,
+#index p {
   padding: 0 0 5px 0;
 }
-li {
+#index ul {
+  padding: 0 0 40px 0;
+  margin: 0 0 0 -20px;
+  list-style: none;
+}
+#index li {
   display: inline-block;
   width: 20%;
   padding: 0 0 25px 20px;
   box-sizing: border-box;
   vertical-align: top;
 }
-li img {
+#index li img {
   display: block;
   width: 100%;
   margin: 0 0 10px 0;
-}
-ul {
-  padding: 0 0 40px 0;
-  margin: 0 0 0 -20px;
-  list-style: none;
 }
 a.button,
 input[type="submit"] {

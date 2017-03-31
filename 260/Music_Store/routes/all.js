@@ -7,4 +7,4 @@ for (var i = 0; i < route_files.length; i +=1 ) {
   require(path.resolve(path.dirname(__dirname), "routes/" + route_files[i]))(router);
 }
 
-module.exports = router;
+module.exports = router
